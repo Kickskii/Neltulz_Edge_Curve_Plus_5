@@ -1,7 +1,6 @@
-# Neltulz_Edge_Curve_Plus
-Blender Addon that allows you to quickly insert edge loops with flow.  (Requires the EdgeFlow Blender Addon)
-
-[View Complete README File](https://www.logichaos.com/neltulz_blender_addons/neltulz_edge_curve_plus/README_Neltulz_Edge_Curve_Plus)
+# Neltulz_Edge_Curve_Plus_Fork
+Blender Addon that allows you to quickly insert edge loops with flow. (Works with Blender 5.1)  (Requires the EdgeFlow Blender Addon)
 
 ## Download Latest Version:
-[Latest Version](https://github.com/Neltulz/Neltulz_Edge_Curve_Plus/releases)
+[Latest Version](https://github.com/Kickskii/Neltulz_Edge_Curve_Plus_5)
+
