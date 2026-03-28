@@ -6,4 +6,6 @@ Blender Addon that allows you to quickly insert edge loops with flow. (Works wit
 (You can also download the repo as a zip and install it in blender)
 
 ## Documentation
-Documentation is included with the addon, please open the included HTML file or click the provided documentation button after installing the addon for addon contents
+Documentation is included with the addon, please open the included HTML file or click the provided documentation button after installing the addon in blender preferences>addons section
+
+<img width="365" height="204" alt="image" src="https://github.com/user-attachments/assets/9edbb7c6-2ad3-4195-af5b-f340ebf6e41b" />
