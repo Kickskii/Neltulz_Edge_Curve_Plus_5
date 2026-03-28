@@ -14,6 +14,7 @@ class NTZEDGCRV_PT_sidebarpanel(Panel):
 
     def draw(self, context):
         layout = self.layout
+        scn = context.scene
         
         addon_name = __name__.split('.')[0]
         prefs = context.preferences.addons[addon_name].preferences
@@ -22,7 +23,17 @@ class NTZEDGCRV_PT_sidebarpanel(Panel):
         # Huge, chunky main action button
         row = layout.row(align=True)
         row.scale_y = 1.0 if is_compact else 1.8 
-        row.operator('ntzedgcrv.insertedges', text="Insert Edge(s)", icon="OUTLINER_OB_CURVE")
+        
+        # We assign the operator to 'op' so we can feed it data
+        op = row.operator('ntzedgcrv.insertedges', text="Insert Edge(s)", icon="OUTLINER_OB_CURVE")
+        
+        # Inject the N-Panel slider values directly into the operator
+        if scn.ntzedgcrv.customEdgeCurveSettings == "USE":
+            op.numSegments = scn.ntzedgcrv.numSegmentsSlider
+            op.useEdgeFlow = scn.ntzedgcrv.useEdgeFlowCheckbox
+            op.tension = scn.ntzedgcrv.tensionSlider
+            op.numIterations = scn.ntzedgcrv.numIterationsSlider
+            op.minAngle = scn.ntzedgcrv.minAngleSlider
 
 class NTZEDGCRV_PT_options(Panel):
     bl_label = "Edge Curve Settings"
